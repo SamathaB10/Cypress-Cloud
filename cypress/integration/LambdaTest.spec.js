@@ -1,5 +1,5 @@
-// @ts-nocheck
 // import 'cypress-axe';
+ 
  
 context('DefaultTest', () => {
     beforeEach(() => {
@@ -20,20 +20,16 @@ context('DefaultTest', () => {
  
     it("InputFormSecond", () =>{
         cy.visit('https://www.lambdatest.com/selenium-playground/input-form-demo');
-        /*cy.injectAxe();
-        cy.checkA11y('#seleniumform > :nth-child(1)');
-        cy.checkA11y('#seleniumform > :nth-child(2)');
-        cy.checkA11y('#seleniumform > :nth-child(4)');
-        cy.checkA11y('#seleniumform > :nth-child(5)');*/
-        cy.get(`input[name='name']`).type('Bhaskar');
-        cy.get('#inputEmail4').type('bhaskaryamala6@gmail.com')
-        cy.get('#inputPassword4').type('Bh@sk@r6302')
+        cy.wait(9000);
+        cy.get('#inputEmail4').type('samatharaobolneni@gmail.com')
+        cy.get(`input[id='name']`).type('Samatha')
+        cy.get('#inputPassword4').type('Sam@2903')
         cy.get('#company').type('delta')
         cy.get('#websitename').type('deltaweklke')
         // cy.get('#seleniumform >:nth-child(3) select').type('i')
-        cy.get('#seleniumform >:nth-child(3) select option').each(($a, index, $list) => {
-            if ($a.text() === 'India') {
-                cy.wrap($a).click({ force: true })
+        cy.get('#seleniumform >:nth-child(3) select option').each(($e1, index, $list) => {
+            if ($e1.text() === 'India') {
+                cy.wrap($e1).click({ force: true })
             }
         })
         cy.get('#inputCity').type('hyderabed')

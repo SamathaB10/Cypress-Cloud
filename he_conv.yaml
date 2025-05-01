@@ -20,7 +20,7 @@ env:
 matrix:
   browser:
     - Firefox-latest-1
-    - Chrome-latest-1
+    - Chrome-132.0
   test:
     - cypress/integration/LambdaTest.spec.js
   os:
